@@ -15,36 +15,23 @@ Python (Pandas) · SQL (SQLite) · Tableau · Jupyter Notebook
 
 ---
 
-## Why this Project?
-
-전자상거래 기업에서는 매일 수많은 주문과 고객 데이터가 생성됩니다. 하지만 경영진은 방대한 데이터를 모두 확인하기 어렵기 때문에 핵심 KPI를 중심으로 현재 비즈니스 성과를 빠르게 파악할 수 있는 Dashboard가 필요합니다.
-
-본 프로젝트는 Olist Brazilian E-commerce 데이터를 활용하여 매출, 주문, 고객, 배송 데이터를 통합 분석하고, 경영진의 데이터 기반 의사결정을 지원하는 Executive Dashboard를 구축하는 것을 목표로 진행했습니다.
-
----
-
 ## Business Problem
 
-본 프로젝트는 다음과 같은 비즈니스 문제를 해결하는 것을 목표로 했습니다.
+전자상거래 기업에서는 매일 수많은 주문, 고객, 상품, 배송 데이터가 생성되지만, 데이터가 여러 영역에 분산되어 있어 경영진이 전체 비즈니스 현황을 한눈에 파악하기 어렵습니다.
 
-- 현재 비즈니스는 지속적으로 성장하고 있는가?
-- 어떤 지역이 가장 높은 매출을 발생시키는가?
-- 어떤 상품 카테고리가 비즈니스를 견인하는가?
-- 고객 규모와 주문 규모는 어느 정도인가?
-- 배송 성과는 지역별로 차이가 있는가?
+본 프로젝트는 이러한 문제를 해결하기 위해 Olist Brazilian E-commerce 데이터를 통합 분석하고, 핵심 KPI를 한눈에 확인할 수 있는 Executive Dashboard를 구축했습니다.
 
 ---
 
 ## Business Questions
 
-프로젝트에서는 다음 질문에 답하기 위해 데이터를 분석했습니다.
+Dashboard를 통해 다음과 같은 핵심 비즈니스 질문에 답하고자 했습니다.
 
-- 전체 매출은 어떻게 변화하고 있는가?
-- 고객 수와 주문 수는 어느 정도인가?
-- 평균 주문 금액(AOV)은 얼마인가?
-- 어떤 상품 카테고리가 가장 높은 매출을 기록하는가?
-- 어떤 지역(State)이 가장 높은 매출을 기록하는가?
-- 배송 기간은 지역별로 어떤 차이를 보이는가?
+- **매출 성장성** : 현재 매출은 지속적으로 성장하고 있는가?
+- **비즈니스 규모** : 고객 및 주문 규모는 어느 정도인가?
+- **주요 카테고리** : 어떤 상품 카테고리가 가장 높은 매출을 기록하는가?
+- **핵심 지역** : 어떤 지역(State)이 가장 높은 매출을 기록하는가?
+- **운영 효율성** : 배송 성과는 지역별로 어떤 차이를 보이는가?
 
 ---
 
@@ -53,6 +40,9 @@ Python (Pandas) · SQL (SQLite) · Tableau · Jupyter Notebook
 - **Dataset** : Olist Brazilian E-Commerce Public Dataset
 - **Period** : 2016.09 ~ 2018.08
 - **Database** : SQLite
+
+### ERD
+
 
 ### Tables Used
 
@@ -119,14 +109,17 @@ Business Recommendations
 
 ## KPI Design
 
-경영진이 핵심 성과를 빠르게 파악할 수 있도록 다음 KPI를 선정했습니다.
+경영진이 비즈니스 성과를 빠르게 파악할 수 있도록 핵심 KPI와 주요 분석 지표를 선정했습니다.
 
 | KPI | Purpose |
 |------|---------|
-| Total Sales | 전체 매출 규모 확인 |
-| Total Orders | 전체 주문 규모 확인 |
-| Total Customers | 고객 규모 확인 |
-| Average Order Value (AOV) | 주문당 평균 구매금액 확인 |
+| Total Sales | 전체 매출 규모 및 월별 성장 추이 확인 |
+| Total Orders | 총 주문 건수 및 비즈니스 거래 규모 파악 |
+| Total Customers | 전체 고객 규모 및 고객 기반 확인 |
+| Average Order Value (AOV) | 주문 1건당 평균 구매 금액(객단가) 파악 |
+| Sales by Category | 상품 카테고리별 매출 성과 분석 |
+| Sales by State | 지역(State)별 매출 성과 비교 |
+| Average Delivery Days | 지역별 평균 배송 기간 및 운영 효율 분석 |
 
 ---
 
