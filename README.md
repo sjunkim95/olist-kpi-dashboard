@@ -2,6 +2,8 @@
 
 ![Dashboard](dashboard/Olist_Executive_Dashboard.png)
 
+> Executive Dashboard Overview
+
 ## 📌 Project Executive Summary
 
 ### Goal
@@ -43,6 +45,7 @@ Dashboard를 통해 다음과 같은 핵심 비즈니스 질문에 답하고자 
 
 ### ERD
 
+![ERD](images/olist_erd.png)
 
 ### Tables Used
 
@@ -111,7 +114,7 @@ Business Recommendations
 
 경영진이 비즈니스 성과를 빠르게 파악할 수 있도록 핵심 KPI와 주요 분석 지표를 선정했습니다.
 
-| KPI | Purpose |
+| KPI | Business Purpose |
 |------|---------|
 | Total Sales | 전체 매출 규모 및 월별 성장 추이 확인 |
 | Total Orders | 총 주문 건수 및 비즈니스 거래 규모 파악 |
@@ -125,7 +128,7 @@ Business Recommendations
 
 ## Dashboard
 
-Dashboard는 다음 5개 영역으로 구성했습니다.
+경영진이 핵심 KPI를 한 화면에서 파악할 수 있도록 다음 5개 영역으로 Dashboard를 구성했습니다.
 
 - Executive KPI
 - Monthly Sales Trend
@@ -133,9 +136,7 @@ Dashboard는 다음 5개 영역으로 구성했습니다.
 - Top States by Sales
 - Delivery Performance Map
 
-이를 통해 경영진이 핵심 성과를 한 화면에서 파악하고, 비즈니스 현황을 직관적으로 이해할 수 있도록 설계했습니다.
-
-> **Tableau Public 배포 후 Interactive Dashboard 링크를 추가할 예정입니다.**
+이를 통해 매출, 고객, 상품, 지역, 배송 성과를 하나의 Dashboard에서 종합적으로 분석하고, 비즈니스 현황을 직관적으로 파악할 수 있도록 설계했습니다.
 
 ---
 
@@ -173,21 +174,29 @@ Dashboard는 다음 5개 영역으로 구성했습니다.
 
 ---
 
-## Folder Structure
+## Repository Structure
+
+프로젝트 분석 과정과 결과물을 다음과 같은 구조로 관리했습니다.
 
 ```text
-olist-kpi-dashboard
+olist-executive-dashboard
 │
-├── dashboard
+├── dashboard/
 │   ├── Olist_Executive_Dashboard.twbx
 │   └── Olist_Executive_Dashboard.png
 │
-├── notebook
+├── docs/
+│   └── 01_Project_Proposal.md
+│
+├── notebook/
 │   ├── 01_data_import.ipynb
 │   ├── 02_data_understanding.ipynb
 │   ├── 03_data_quality.ipynb
 │   ├── 04_KPI_analysis.ipynb
 │   └── 05_Tableau_Dashboard.ipynb
+│
+├── images/
+│   └── olist_erd.png
 │
 └── README.md
 ```
@@ -196,16 +205,17 @@ olist-kpi-dashboard
 
 ## What I Learned
 
-이번 프로젝트를 통해 단순히 데이터를 시각화하는 것을 넘어, 비즈니스 문제를 정의하고 KPI를 설계하며 데이터 기반 의사결정을 지원하는 Dashboard를 구축하는 과정을 경험했습니다.
+이번 프로젝트를 통해 Olist Brazilian E-commerce 데이터를 활용하여 Data Understanding, Data Quality Check, KPI 설계, Tableau Dashboard 구축까지 데이터 분석 프로젝트의 전 과정을 수행했습니다.
 
-또한 데이터 이해(Data Understanding), 데이터 품질 검증(Data Quality Check), KPI 설계, Tableau Dashboard 구현까지 데이터 분석 프로젝트의 전체 프로세스를 수행하며 분석 프로젝트의 흐름을 체계적으로 익힐 수 있었습니다.
+단순히 데이터를 시각화하는 데 그치지 않고, 분석 결과를 비즈니스 관점에서 해석하여 주요 인사이트를 도출하고 구체적인 개선 방향으로 연결하는 역량을 키웠습니다.
+
+또한 SQL과 Python(Pandas)을 활용한 데이터 추출 및 전처리, 결측치·중복·PK/FK 무결성 검증, Tableau 기반 KPI 시각화까지 직접 수행하며 각 분석 단계가 최종 분석 결과의 신뢰성과 활용도에 어떤 영향을 미치는지 이해할 수 있었습니다.
 
 ---
 
 ## Future Improvements
 
-- Customer Segmentation 분석 추가
-- Cohort Analysis 및 Retention 분석 추가
+- Customer Segmentation 분석
+- Cohort 및 Retention 분석
 - Profit 기반 KPI 추가
 - Dashboard 인터랙션 및 필터 기능 고도화
-- Tableau Public을 활용한 Interactive Dashboard 배포
